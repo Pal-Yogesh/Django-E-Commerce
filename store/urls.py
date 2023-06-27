@@ -8,6 +8,10 @@ from .views.checkout import CheckOut
 from .views.orders import OrderView
 from .middlewares.auth import  auth_middleware
 
+# Django admin and header customization
+admin.site.site_header = "Welcome To Django Admin Panel"
+admin.site.site_title = "E-Commerce"
+admin.site.index_title = "Welcome To Django Portal"
 
 urlpatterns = [
     path('', Index.as_view(), name='homepage'),
